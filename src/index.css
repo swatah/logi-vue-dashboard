@@ -1,0 +1,33 @@
+@import "tailwindcss";
+
+/* Hide Scrollbars (Consolidated) */
+.no-scrollbar, .hide-scrollbar {
+  -ms-overflow-style: none; /* IE and Edge */
+  scrollbar-width: none; /* Firefox */
+}
+.no-scrollbar::-webkit-scrollbar, .hide-scrollbar::-webkit-scrollbar {
+  display: none; /* Chrome, Safari, Edge */
+}
+body {
+  font-family: "Inter", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: <weight>;
+  font-style: normal;
+}
+
+:root {
+  --light-blue: #46bbe3;
+  --dark-blue: #0a2e6c;
+}
+.light-blue {
+  background-color: var(--light-blue);
+}
+.light-blue-text {
+  color: var(--light-blue);
+}
+.dark-blue {
+  background-color: var(--dark-blue);
+}
+.dark-blue-text {
+  color: var(--dark-blue);
+}
