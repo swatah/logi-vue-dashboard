@@ -18,16 +18,16 @@ export default function Navbar() {
         <div className="px-3 py-3 lg:px-5 lg:pl-3">
           <div className="flex items-center justify-between mx-10">
             <div className="flex items-center justify-start rtl:justify-end text-[#0a2e6c] text-4xl font-bold">
-              <Link to="/">Logi<span className="text-[#46bbe3]">Vue</span>&nbsp;AI</Link>
+              <Link to="">Logi<span className="text-[#46bbe3]">Vue</span>&nbsp;AI</Link>
             </div>
             <div className="flex items-center">
               <div className="flex items-center mr-20">
-                <Link to="/Live">
+                <Link to="/Dashboard/Live">
                   <button className="border-2 border-red-600 px-5 py-1 font-bold text-red-600 rounded-lg cursor-pointer">
                     <span className=" text-xl flex">
                       Live{" "}
                       <img
-                        src="images/icons/play.svg"
+                        src="/images/icons/play.svg"
                         alt=""
                         className="w-6 ml-2"
                       />
@@ -46,7 +46,7 @@ export default function Navbar() {
                   >
                     <img
                       className="w-8 h-8 rounded-full"
-                      src="images/avtar/avtar-1.svg"
+                      src="/images/avtar/avtar-1.svg"
                       alt="user photo"
                     />
                   </button>
