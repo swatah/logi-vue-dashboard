@@ -37,6 +37,12 @@ export default function AiConfig() {
       [key]: !prev[key],
     }));
   };
+  const handleEventToggle = (key) => {
+    setEvents((prev) => ({
+      ...prev,
+      [key]: !prev[key],
+    }));
+  }
 
   return (
     <div className="p-6 space-y-6">
@@ -160,7 +166,7 @@ export default function AiConfig() {
                 type="checkbox"
                 checked={events.load}
                 className="w-5 h-5 text-blue-600 bg-gray-100 rounded focus:ring-blue-500 dark:bg-gray-700 dark:border-gray-600"
-                onChange={() => handleToggle("load")}
+                onChange={() => handleEventToggle("load")}
               />
               <span className="flex items-center gap-x-2">
               <ArrowUpFromLine />
@@ -175,7 +181,7 @@ export default function AiConfig() {
                 type="checkbox"
                 checked={events.unLoad}
                 className="w-5 h-5 text-blue-600 bg-gray-100 rounded focus:ring-blue-500 dark:bg-gray-700 dark:border-gray-600"
-                onChange={() => handleToggle("unLoad")}
+                onChange={() => handleEventToggle("unLoad")}
               />
               <span className="flex items-center gap-x-2">
               <ArrowDownFromLine />
@@ -190,7 +196,7 @@ export default function AiConfig() {
                 type="checkbox"
                 checked={events.entry}
                 className="w-5 h-5 text-blue-600 bg-gray-100 rounded focus:ring-blue-500 dark:bg-gray-700 dark:border-gray-600"
-                onChange={() => handleToggle("entry")}
+                onChange={() => handleEventToggle("entry")}
               />
               <span className="flex items-center gap-x-2">
               <LogIn />
@@ -205,7 +211,7 @@ export default function AiConfig() {
                 type="checkbox"
                 checked={events.exit}
                 className="w-5 h-5 text-blue-600 bg-gray-100 rounded focus:ring-blue-500 dark:bg-gray-700 dark:border-gray-600"
-                onChange={() => handleToggle("exit")}
+                onChange={() => handleEventToggle("exit")}
               />
               <span className="flex items-center gap-x-2">
               <LogOut />
@@ -220,7 +226,7 @@ export default function AiConfig() {
                 type="checkbox"
                 checked={events.tamper}
                 className="w-5 h-5 text-blue-600 bg-gray-100 rounded focus:ring-blue-500 dark:bg-gray-700 dark:border-gray-600"
-                onChange={() => handleToggle("tamper")}
+                onChange={() => handleEventToggle("tamper")}
               />
               <span className="flex items-center gap-x-2">
               <Thermometer />

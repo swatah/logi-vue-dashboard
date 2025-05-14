@@ -1,5 +1,18 @@
-import { Bell, BrainCircuit, Camera,  Clock,  Save, Tag, Warehouse } from "lucide-react";
+import {
+  Bell,
+  BrainCircuit,
+  Camera,
+  Clock,
+  Save,
+  Tag,
+  Warehouse,
+} from "lucide-react";
 import React from "react";
+import CoreBayConfig from "./CoreBayConfig";
+import CameraSensor from "./CameraSensor";
+import Operational from "./Operational";
+import EventsAlerts from "./EventsAlerts";
+import Metadata from "./Metadata";
 
 export default function BayConfig() {
   return (
@@ -14,58 +27,52 @@ export default function BayConfig() {
         </div>
       </div>
       <hr className="border border-gray-200" />
-      <div className="-mx-2 flex flex-wrap">
-  <div className="w-full sm:w-1/2 lg:w-1/3 px-2 mb-4">
-    <div className="border border-gray-300 rounded-lg p-3">
-      <div className="flex gap-x-3 font-semibold">
-        <Warehouse />
-        <h1>Core Bay Configuration</h1>
-      </div>
-      <hr className="border-gray-200 my-3" />
-    </div>
-  </div>
+      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
+        <div className="border border-gray-300 rounded-lg p-3 row-span-2 h-fit">
+          <div className="flex gap-x-3 font-semibold">
+            <Warehouse />
+            <h1>Core Bay Configuration</h1>
+          </div>
+          <hr className="border-gray-200 my-3" />
+          <CoreBayConfig />
+        </div>
 
-  <div className="w-full sm:w-1/2 lg:w-1/3 px-2 mb-4">
-    <div className="border border-gray-300 rounded-lg p-3">
-      <div className="flex gap-x-3 font-semibold">
-        <Camera />
-        <h1>Camera & Sensor Association</h1>
-      </div>
-      <hr className="border-gray-200 my-3" />
-    </div>
-  </div>
+        <div className="border border-gray-300 rounded-lg p-3 h-fit">
+          <div className="flex gap-x-3 font-semibold">
+            <Camera />
+            <h1>Camera & Sensor Association</h1>
+          </div>
+          <hr className="border-gray-200 my-3" />
+          <CameraSensor />
+        </div>
 
-  <div className="w-full sm:w-1/2 lg:w-1/3 px-2 mb-4">
-    <div className="border border-gray-300 rounded-lg p-3">
-      <div className="flex gap-x-3 font-semibold">
-        <Clock />
-        <h1>Operational Settings</h1>
-      </div>
-      <hr className="border-gray-200 my-3" />
-    </div>
-  </div>
+        <div className="border border-gray-300 rounded-lg p-3 h-fit">
+          <div className="flex gap-x-3 font-semibold">
+            <Clock />
+            <h1>Operational Settings</h1>
+          </div>
+          <hr className="border-gray-200 my-3" />
+          <Operational />
+        </div>
 
-  <div className="w-full sm:w-1/2 lg:w-1/3 px-2 mb-4">
-    <div className="border border-gray-300 rounded-lg p-3">
-      <div className="flex gap-x-3 font-semibold">
-      <Bell />
-      <h1>Event & Alert Settings</h1>
-      </div>
-      <hr className="border-gray-200 my-3" />
-    </div>
-  </div>
+        <div className="border border-gray-300 rounded-lg p-3 h-fit">
+          <div className="flex gap-x-3 font-semibold">
+            <Bell />
+            <h1>Event & Alert Settings</h1>
+          </div>
+          <hr className="border-gray-200 my-3" />
+          <EventsAlerts />
+        </div>
 
-  <div className="w-full sm:w-1/2 lg:w-1/3 px-2 mb-4">
-    <div className="border border-gray-300 rounded-lg p-3">
-      <div className="flex gap-x-3 font-semibold">
-      <Tag />
-      <h1>Metadata & Integration</h1>
+        <div className="border border-gray-300 rounded-lg p-3 h-fit">
+          <div className="flex gap-x-3 font-semibold">
+            <Tag />
+            <h1>Metadata & Integration</h1>
+          </div>
+          <hr className="border-gray-200 my-3" />
+          <Metadata/>
+        </div>
       </div>
-      <hr className="border-gray-200 my-3" />
-    </div>
-  </div>
-</div>
-
     </>
   );
 }
