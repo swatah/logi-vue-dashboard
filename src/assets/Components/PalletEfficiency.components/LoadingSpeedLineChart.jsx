@@ -41,7 +41,7 @@ const LoadingSpeedLineChart = () => {
 
   return (
     <div>
-      <h2>Loading Speed Over Time</h2>
+      <h2 className="text-xl font-semibold">Loading Speed Over Time</h2>
       <ReactApexChart options={options} series={series} type="line" height={350} />
     </div>
   );

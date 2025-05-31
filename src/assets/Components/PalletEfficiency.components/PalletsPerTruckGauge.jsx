@@ -33,25 +33,29 @@ const PalletsPerTruckGauge = () => {
   };
 
   return (
-    <div className="flex">
+    <>
+    <h2 className="text-xl font-semibold">Pallet Efficiency</h2>
+    <div className="grid grid-flow-col">
       {/* Left Column - Gauge Chart */}
-      <div style={{ width: "50%" }}>
+      <div className="">
         <ReactApexChart options={options} series={options.series} type="radialBar" height={350} />
       </div>
 
       {/* Right Column - Stats */}
-      <div style={{ width: "50%", paddingLeft: "20px" }}>
+      <div className=" space-y-4 flex flex-col justify-center">
         <div>
-          <h3>Completed</h3>
+          <h3 className="text-lg font-semibold">Completed</h3>
           <p>70 Pallets</p>
         </div>
         <div>
-          <h3>Target</h3>
+          <h3 className="text-lg font-semibold">Target</h3>
           <p>100 Pallets</p>
         </div>
       </div>
     </div>
-  );
+
+    </>
+     );
 };
 
 export default PalletsPerTruckGauge;

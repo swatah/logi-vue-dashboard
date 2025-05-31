@@ -22,7 +22,7 @@ const HandledManuallyPieChart = () => {
 
   return (
     <div>
-      <h2>Handled Manually</h2>
+      <h2 className="text-xl font-semibold">Handled Manually</h2>
       <ReactApexChart options={options} series={series} type="pie" height={350} />
     </div>
   );
